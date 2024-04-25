@@ -12,11 +12,17 @@ function App() {
       ...prev,
     ]);
   }
+
+  function setCompletedTodo(id: number, completed: boolean) {
+    setTodos((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, completed } : item))
+    );
+  }
   return (
     <>
       <h1>Todo app</h1>
       <TodoForm onAddTodo={addTodo} />
-      <TodoList todo={todos} />
+      <TodoList todo={todos} onCompletedChange={setCompletedTodo} />
     </>
   );
 }
