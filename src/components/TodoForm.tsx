@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./TodoForm.module.css";
 
 interface TodoFormProps {
   onAddTodo: (title: string) => void;
@@ -20,8 +21,8 @@ function TodoForm({ onAddTodo }: TodoFormProps) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={todo} onChange={handleChange} />
+      <form onSubmit={handleSubmit} className={styles["form-todo"]}>
+        <input type="text" value={todo} onChange={handleChange} className={styles.}/>
         <button>Add</button>
       </form>
     </>
