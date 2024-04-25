@@ -16,7 +16,7 @@ function App() {
     <>
       <h1>Todo app</h1>
       <TodoForm onAddTodo={addTodo} />
-      <TodoList />
+      <TodoList todo={todos} />
     </>
   );
 }

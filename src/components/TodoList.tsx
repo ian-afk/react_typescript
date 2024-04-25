@@ -1,9 +1,16 @@
+import { TodoForm } from "../models/todoForm";
 import TodoItem from "./TodoItem";
 
-export default function TodoList() {
+interface TodoListProps {
+  todo: TodoForm[];
+}
+
+export default function TodoList({ todo }: TodoListProps) {
   return (
     <div>
-      <TodoItem />
+      {todo.map((item) => (
+        <TodoItem todo={item} />
+      ))}
     </div>
   );
 }
