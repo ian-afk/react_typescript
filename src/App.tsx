@@ -18,11 +18,19 @@ function App() {
       prev.map((item) => (item.id === id ? { ...item, completed } : item))
     );
   }
+
+  function deleteTodo(id: number) {
+    setTodos((prev) => prev.filter((item) => item.id !== id));
+  }
   return (
     <>
       <h1>Todo app</h1>
       <TodoForm onAddTodo={addTodo} />
-      <TodoList todo={todos} onCompletedChange={setCompletedTodo} />
+      <TodoList
+        todo={todos}
+        onCompletedChange={setCompletedTodo}
+        onDeleteTodo={deleteTodo}
+      />
     </>
   );
 }

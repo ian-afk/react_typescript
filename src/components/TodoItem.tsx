@@ -3,9 +3,14 @@ import { TodoForm } from "../models/todoForm";
 interface TodoItemProps {
   todo: TodoForm;
   onCompletedChange: (id: number, completed: boolean) => void;
+  onDeleteTodo: (id: number) => void;
 }
 
-export default function TodoItem({ todo, onCompletedChange }: TodoItemProps) {
+export default function TodoItem({
+  todo,
+  onCompletedChange,
+  onDeleteTodo,
+}: TodoItemProps) {
   return (
     <>
       <label htmlFor="#">
@@ -19,7 +24,7 @@ export default function TodoItem({ todo, onCompletedChange }: TodoItemProps) {
           {todo.todo}
         </span>
       </label>
-      <button>Delete</button>
+      <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
     </>
   );
 }
