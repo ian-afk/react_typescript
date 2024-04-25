@@ -2,6 +2,7 @@ import { useState } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import { TodoForm as todo } from "./models/todoForm";
+import styles from "./App.module.css";
 
 function App() {
   const [todos, setTodos] = useState<todo[] | []>([]);
@@ -23,7 +24,7 @@ function App() {
     setTodos((prev) => prev.filter((item) => item.id !== id));
   }
   return (
-    <>
+    <main className={styles.container}>
       <h1>Todo app</h1>
       <TodoForm onAddTodo={addTodo} />
       <TodoList
@@ -31,7 +32,7 @@ function App() {
         onCompletedChange={setCompletedTodo}
         onDeleteTodo={deleteTodo}
       />
-    </>
+    </main>
   );
 }
 
