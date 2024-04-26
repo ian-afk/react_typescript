@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+main {
+  overflow-y: auto;
+}
+
 .container {
   padding-top: 80px;
   background-color: #d4d454;
