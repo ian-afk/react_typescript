@@ -28,4 +28,5 @@
 
 .todoItems button:hover {
   cursor: pointer;
+  background-color: #4b0b0b;
 }
