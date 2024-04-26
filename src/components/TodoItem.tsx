@@ -1,4 +1,5 @@
 import { TodoForm } from "../models/todoForm";
+import styles from "./TodoItem.module.css";
 
 interface TodoItemProps {
   todo: TodoForm;
@@ -12,8 +13,8 @@ export default function TodoItem({
   onDeleteTodo,
 }: TodoItemProps) {
   return (
-    <>
-      <label htmlFor="#">
+    <div className={styles.todoItems}>
+      <label>
         <input
           type="checkbox"
           onChange={(e) => onCompletedChange(todo.id, e.target.checked)}
@@ -25,6 +26,6 @@ export default function TodoItem({
         </span>
       </label>
       <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
-    </>
+    </div>
   );
 }

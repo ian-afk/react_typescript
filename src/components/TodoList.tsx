@@ -1,5 +1,6 @@
 import { TodoForm } from "../models/todoForm";
 import TodoItem from "./TodoItem";
+import styles from "./TodoList.module.css";
 
 interface TodoListProps {
   todo: TodoForm[];
@@ -13,7 +14,7 @@ export default function TodoList({
   onDeleteTodo,
 }: TodoListProps) {
   return (
-    <div>
+    <div className={styles.todoList}>
       {todo.map((item) => (
         <TodoItem
           onDeleteTodo={onDeleteTodo}
