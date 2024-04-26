@@ -20,12 +20,12 @@ function TodoForm({ onAddTodo }: TodoFormProps) {
   }
 
   return (
-    <>
+    <div className={styles.todoForm}>
       <form onSubmit={handleSubmit} className={styles["form-todo"]}>
         <input type="text" value={todo} onChange={handleChange} />
         <button>Add</button>
       </form>
-    </>
+    </div>
   );
 }
 
