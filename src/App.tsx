@@ -25,14 +25,16 @@ function App() {
   }
   return (
     <main className={styles.container}>
-      <div>
-        <h1>Todo app</h1>
-        <TodoForm onAddTodo={addTodo} />
-        <TodoList
-          todo={todos}
-          onCompletedChange={setCompletedTodo}
-          onDeleteTodo={deleteTodo}
-        />
+      <div className={styles["flex-container"]}>
+        <div>
+          <h1>Todo App</h1>
+          <TodoForm onAddTodo={addTodo} />
+          <TodoList
+            todo={todos}
+            onCompletedChange={setCompletedTodo}
+            onDeleteTodo={deleteTodo}
+          />
+        </div>
       </div>
     </main>
   );

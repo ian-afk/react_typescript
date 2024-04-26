@@ -1,14 +1,16 @@
 .form-todo {
-  width: 400px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
+
+  margin: 12px 4px 24px;
+  flex-wrap: wrap;
 }
 
 .form-todo input {
   border-radius: 5px 0 0 5px;
   padding: 4px;
   border: none;
+  flex: 1 1 auto;
+  font-size: 1.6rem;
 }
 
 .form-todo button {
@@ -17,6 +19,8 @@
   background-color: #e7d3b8;
   color: white;
   padding: 4px;
+  flex: 1 1 auto;
+  font-size: 1.6rem;
 }
 
 .form-todo button:hover {
