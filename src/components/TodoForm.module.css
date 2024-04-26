@@ -4,3 +4,22 @@
   justify-content: center;
   margin-bottom: 24px;
 }
+
+.form-todo input {
+  border-radius: 5px 0 0 5px;
+  padding: 4px;
+  border: none;
+}
+
+.form-todo button {
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #e7d3b8;
+  color: white;
+  padding: 4px;
+}
+
+.form-todo button:hover {
+  background-color: #c4a378;
+  cursor: pointer;
+}
