@@ -12,6 +12,12 @@ export default function TodoItem({
   onCompletedChange,
   onDeleteTodo,
 }: TodoItemProps) {
+  function deleteTodoConfirm(id: number) {
+    const confirmed = window.confirm("Are you sure you want to delete?");
+
+    if (confirmed) onDeleteTodo(id);
+    else return;
+  }
   return (
     <div className={styles.todoItems}>
       <label>
@@ -25,7 +31,7 @@ export default function TodoItem({
           {todo.todo}
         </span>
       </label>
-      <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
+      <button onClick={() => deleteTodoConfirm(todo.id)}>Delete</button>
     </div>
   );
 }
