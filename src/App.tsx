@@ -25,13 +25,15 @@ function App() {
   }
   return (
     <main className={styles.container}>
-      <h1>Todo app</h1>
-      <TodoForm onAddTodo={addTodo} />
-      <TodoList
-        todo={todos}
-        onCompletedChange={setCompletedTodo}
-        onDeleteTodo={deleteTodo}
-      />
+      <div>
+        <h1>Todo app</h1>
+        <TodoForm onAddTodo={addTodo} />
+        <TodoList
+          todo={todos}
+          onCompletedChange={setCompletedTodo}
+          onDeleteTodo={deleteTodo}
+        />
+      </div>
     </main>
   );
 }
