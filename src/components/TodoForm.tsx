@@ -14,7 +14,7 @@ function TodoForm({ onAddTodo }: TodoFormProps) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-
+    if (!todo) return;
     onAddTodo(todo);
     setTodo("");
   }
