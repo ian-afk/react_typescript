@@ -21,8 +21,6 @@ export default function TodoList({
     }
   });
 
-  console.log(todoSort);
-
   return (
     <div className={styles.todoList}>
       {todo.length > 0 ? (
