@@ -6,9 +6,12 @@ import styles from "./App.module.css";
 
 function App() {
   const [todos, setTodos] = useState(() => {
-    const savedTodos: todo[] = JSON.parse(localStorage.getItem("todos") || "");
+    const savedTodos: todo[] = JSON.parse(
+      localStorage.getItem("todos") || "[]"
+    );
     return savedTodos.length > 0 ? savedTodos : [];
   });
+  console.log(todos);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
